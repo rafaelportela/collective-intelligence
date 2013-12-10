@@ -1,0 +1,48 @@
+articles = ['A', 'B', 'C']
+words = ['hurricane', 'democrats', 'world']
+matrix = [
+  [3, 0, 1],
+  [1, 2, 0],
+  [0, 0, 2],
+]
+
+allwords -> count of word usage across all articles
+         -> determine which words should be considered parts of features
+
+articlewords -> counts of words in each articles
+articletitles
+
+--
+Make Matrix
+
+wordvec -> words in more than 3 articles, and less than 60% of them.
+wordmatrix -> matrix
+
+--
+NMF - Non negative matrix factorization
+
+feature matrix
+  -> feature is a "theme"
+  -> how import is a word (column) to the feature (row)
+
+weight matrix
+  -> features (column) vs article (row)
+  -> how import is a features (column) to the article (row)
+
+        ** FM **                                  ** WM **
+   hurricane democrats                           f1            f2
+f1                         hurricane in florida
+f1                           democrats election
+
+            ** articles matrix ** 
+                        hurricane  democrats
+hurricane in florida
+ democrats election
+
+The Algorithm
+  -> the algorithm reconstructs the Articles Matrix with the best Features and Weight matrices
+  -> difcost as a cost function (see how close of Articles Matrix it is)
+  -> Multiplicative Update Rules
+     * 
+
+
